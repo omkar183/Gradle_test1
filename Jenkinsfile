@@ -1,5 +1,3 @@
-jenkins file
-
 pipeline {
     agent any  
 
@@ -25,12 +23,17 @@ pipeline {
                 sh 'gradle test'  
             }
         }
+
         
+        
+       
         stage('Run Application') {
             steps {
+                
                 sh 'gradle run'
             }
         }
+
         
     }
 
